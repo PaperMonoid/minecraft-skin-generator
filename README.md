@@ -6,7 +6,7 @@ This work attempts to generate Minecraft skins using an autoencoder model.  Auto
 
 This particular model was chosen with the hopes of it being able learn distinctive traits from pictures of real people as well as fictional characters and encode them into a smaller respresentation. This representation would then be decoded by a Minecraft skin generator.
 
-<center><img alt="Autoencoder diagram" src="images/model-render.png" width="400px"></center>
+<center><img alt="Autoencoder diagram" src="images/model-render.png" width="600px"></center>
 
 ## Implementation
 A dataset with labeled pictures of real people and fictional characters with their corresponding Minecraft skin was needed, so the first step in the process was to collect a dataset. Many freely available datasets on the Internet were looked at but none of them matched the requirements for the type of model to be implemented, so a new dataset had to be constructed from scratch.
@@ -18,7 +18,7 @@ Around 650 images were collected with their corresponding Minecraft skins as lab
 
 The experiments were run on a [google collab](https://colab.research.google.com) python notebook since it is free platform with a vast amount computational resources available and supports machine learning libraries such as keras and tensorflow by default. Training data was stored in a [google drive](https://drive.google.com) directory and fetched through google collabs with their API.
 
-<center><img alt="Google drive dataset" src="images/google-drive-dataset.png" width="500px"></center>
+<center><img alt="Google drive dataset" src="images/google-drive-dataset.PNG" width="500px"></center>
 
 As far as the model pipeline goes, the only preprocessing done was making sure that the inputs were 64 by 64 pixels RGB images and also making sure that the labels were 64 by 64 pixels RGBA images. Data was fed into the model by listing all the files in the "input" and "output" directories and then matching all the input and output files with the same name.
 
